@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+{% macro pagination(url, page) %}
+    <ul class="uk-pagination">
+        {% if page.has_previous %}
+            <li><a href="{{ url }}{{ page.page_index - 1 }}"><i class="uk-icon-angle-double-left"></i></a></li>
+        {% else %}
+            <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+        {% endif %}
+            <li class="uk-active"><span>{{ page.page_index }}</span></li>
+        {% if page.has_next %}
+            <li><a href="{{ url }}{{ page.page_index + 1 }}"><i class="uk-icon-angle-double-right"></i></a></li>
+        {% else %}
+            <li class="uk-disabled"><span><i class="uk-icon-angle-double-right"></i></span></li>
+        {% endif %}
+    </ul>
+{% endmacro %}
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    {% block meta %}<!-- block meta  -->{% endblock %}
+    <title>{% block title %} ? {% endblock %} - Awesome Python Webapp</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/sha1.min.js"></script>
+    <script src="../static/js/vue.min.js"></script>
+    {% block beforehead %}<!-- before head  -->{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+      <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+        <img src="https://www.easyicon.net/download/png/1218284/64/" alt="logo" style="width:40px;">
+        </a>
+      <!-- Links -->
+        <div class="container-fluid">
+            <ul class="navbar-nav col-10">
+            <li class="nav-item">
+                <a class="nav-link" href="/">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">教程</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">源码</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav col-2">
+            <!--靠右的话需要学习bootstrap对齐及间距-->
+            {% if user %}
+            <li class="nav-item">
+                <a class="nav-link" href="/">{{user.name}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">退出</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">登录</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">注册</a>
+            </li>
+            {% endif%}
+        </ul>
+        </div>
+
+    </nav>
+    <div class="">
+        <div class="">
+            <!-- content -->
+            {% block content %}
+            {% endblock %}
+            <!-- // content -->
+        </div>
+    </div>
+    <div class="text-center">
+        <p>
+            <a target="_blank" href="http://weibo.com/liaoxuefeng" class="uk-icon-button uk-icon-weibo"></a>
+            <a target="_blank" href="https://github.com/michaelliao" class="uk-icon-button uk-icon-github"></a>
+            <a target="_blank" href="http://www.linkedin.com/in/liaoxuefeng" class="uk-icon-button uk-icon-linkedin-square"></a>
+            <a target="_blank" href="https://twitter.com/liaoxuefeng" class="uk-icon-button uk-icon-twitter"></a></p>
+        <p>Powered by <a href="http://www.ourmem.cn">ZhangPeng</a>. Copyright &copy; 2018</p>
+        <p><a href="http://www.ourmem.cn/" target="_blank">www.ourmem.cn</a>. All rights reserved.</p>
+        <a target="_blank" href="http://www.ourmem.cn/"><i class="" style="font-size:64px; color: #444;"></i></a>
+    </div>
+</body>
+</html>

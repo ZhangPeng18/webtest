@@ -1,0 +1,92 @@
+{% extends '__base__.html' %}
+
+{% block title %}日志{% endblock %}
+
+{% block content %}
+<style type="text/css">
+    .body{
+        padding: 50px;
+        background: #EAEAEA;
+    }
+    .sidebar .widget {
+        background: #fff;
+        padding: 21px 30px;
+}
+    .widget{
+        margin-bottom: 35px;
+    }
+   .sidebar .widget .title{
+
+        padding-bottom: 7px;
+        border-bottom: 1px solid #EAEAEA;
+        margin-bottom: 21px;
+        position: relative;
+    }
+   .sidebar .widget .title:after {
+    content: "";
+    width: 90px;
+    height: 1px;
+    background: #007bff;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+    .content{
+        background: white;
+    }
+    .content .area{
+       border-bottom: 1px solid #EAEAEA;
+    }
+</style>
+<div class="container-fluid body">
+    <div class="row">
+    <div class="col-9 content">
+       <div class="area">
+           <h4 class="text-primary" style="margin-top: 20px">1924年 10月17日 直奉军阀山海关战役开始</h4>
+           <p class="text-muted">2018-09-10 12:20</p>
+           <p>1924年10月17日，直、奉两军山海关战役开始。直系军队凭借有利地形，抵抗奉军的猛攻，双方对峙，伤亡都很惨重。10月23日，直系将领冯玉祥发动北京政变，囚禁曹锟。因此，直军军心大动，迅速退至天津一线，等待江浙直军援助以图回师北京。奉军长驱直入，切断了直军与榆关(山海关)的交通。与此同时，山东督军郑士琦宣布“武装中立”，不许江浙援军通过，山西督军阎锡山进占石家庄。吴佩孚首尾无援，在奉军和国民军夹击下溃不成军。10月31日，山海关战役以直系失败而告终。直系的重要将领由秦皇岛乘船逃回天津，其余全部被奉军所俘。</p>
+           <p class="text-dark">评论(1000+)</p>
+       </div>
+        <div class="area">
+           <h4 class="text-primary" style="margin-top: 20px">python学习笔记</h4>
+           <p class="text-muted">2018-09-10 12:20</p>
+           <p>Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。 [1]  Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。 [2]  国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。 [3]   </p>
+           <p class="text-dark">评论(1000+)</p>
+       </div>
+        <div class="area">
+           <h4 class="text-primary" style="margin-top: 20px">python学习笔记</h4>
+           <p class="text-muted">2018-09-10 12:20</p>
+           <p>Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。 [1]  Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。 [2]  国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。 [3]   </p>
+           <p class="text-dark">评论(1000+)</p>
+       </div>
+        <!--{% for blog in blogs %}-->
+            <!--<article class="uk-article">-->
+                <!--<h2><a href="/blog/{{ blog.id }}">{{ blog.name }}</a></h2>-->
+                <!--<p class="uk-article-meta">发表于{{ blog.created_at}}</p>-->
+                <!--<p>{{ blog.summary }}</p>-->
+                <!--<p><a href="/blog/{{ blog.id }}">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>-->
+            <!--</article>-->
+            <!--<hr class="uk-article-divider">-->
+        <!--{% endfor %}-->
+    </div>
+    <div class="col-3 sidebar">
+        <div class="widget">
+            <h5 class="title">友情链接1</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a target="_blank" href="#">编程</a></li>
+                <!--打开新的一页：target-->
+                <li class="nav-item"><a target="_blank" href="#">读书</a></li>
+            </ul>
+        </div>
+        <div class="widget">
+            <h5 class="title">友情链接2</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a target="_blank" href="#">编程</a></li>
+                <!--打开新的一页：target-->
+                <li class="nav-item"><a target="_blank" href="#">读书</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
